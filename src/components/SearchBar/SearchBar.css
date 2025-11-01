@@ -1,0 +1,26 @@
+.search {
+  display: flex;
+}
+
+.search-input {
+  width: 60%;
+  padding: 0.5rem;
+}
+
+.search-controls {
+  display: flex;
+}
+
+.search-button {
+  display: block;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.search-radio:checked + .search-button {
+  background-color: red;
+}
+
+.search-radio {
+  /* display: none; */
+}

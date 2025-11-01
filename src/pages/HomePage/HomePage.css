@@ -1,0 +1,14 @@
+.page {
+  width: 60%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+  gap: 2rem;
+  justify-content: space-between;
+}
