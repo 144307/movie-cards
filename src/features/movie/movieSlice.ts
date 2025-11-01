@@ -11,14 +11,6 @@ const baseUrl = "http://www.omdbapi.com/";
 const initialState: IMovie[] = [
   {
     bookmarked: false,
-    imdbId: "tt0106856",
-    plot: "An ordinary man reaches his breaking point and starts lashing out against the various flaws he sees in society.",
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BZmE2MGQ4OWEtMmUzYS00ZDBhLTg4ZDAtZGRhYWNkOTAzYWQyXkEyXkFqcGc@._V1_SX300.jpg",
-    title: "Falling Down",
-  },
-  {
-    bookmarked: false,
     imdbId: "tt0083658",
     plot: "A blade runner must pursue and terminate four replicants who stole a ship in space and have returned to Earth to find their creator.",
     poster:
@@ -27,19 +19,11 @@ const initialState: IMovie[] = [
   },
   {
     bookmarked: false,
-    imdbId: "tt0106856",
-    plot: "An ordinary man reaches his breaking point and starts lashing out against the various flaws he sees in society.",
+    imdbId: "tt0062622",
+    plot: "When a mysterious artifact is uncovered on the Moon, a spacecraft manned by two humans and one supercomputer is sent to Jupiter to find its origins.",
     poster:
-      "https://m.media-amazon.com/images/M/MV5BZmE2MGQ4OWEtMmUzYS00ZDBhLTg4ZDAtZGRhYWNkOTAzYWQyXkEyXkFqcGc@._V1_SX300.jpg",
-    title: "Falling Down",
-  },
-  {
-    bookmarked: false,
-    imdbId: "tt0083658",
-    plot: "A blade runner must pursue and terminate four replicants who stole a ship in space and have returned to Earth to find their creator.",
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BOWQ4YTBmNTQtMDYxMC00NGFjLTkwOGQtNzdhNmY1Nzc1MzUxXkEyXkFqcGc@._V1_SX300.jpg",
-    title: "Blade Runner",
+      "https://m.media-amazon.com/images/M/MV5BNjU0NDFkMTQtZWY5OS00MmZhLTg3Y2QtZmJhMzMzMWYyYjc2XkEyXkFqcGc@._V1_SX300.jpg",
+    title: "2001: A Space Odyssey",
   },
   {
     bookmarked: false,
@@ -51,11 +35,35 @@ const initialState: IMovie[] = [
   },
   {
     bookmarked: false,
-    imdbId: "tt0083658",
-    plot: "A blade runner must pursue and terminate four replicants who stole a ship in space and have returned to Earth to find their creator.",
+    imdbId: "tt0144084",
+    plot: "A wealthy New York City investment banking executive, Patrick Bateman, hides his alternate psychopathic ego from his co-workers and friends as he delves deeper into his violent, hedonistic fantasies.",
     poster:
-      "https://m.media-amazon.com/images/M/MV5BOWQ4YTBmNTQtMDYxMC00NGFjLTkwOGQtNzdhNmY1Nzc1MzUxXkEyXkFqcGc@._V1_SX300.jpg",
-    title: "Blade Runner",
+      "https://m.media-amazon.com/images/M/MV5BNzBjM2I5ZjUtNmIzNy00OGNkLWIwZDMtOTAwYWUwMzA2YjdlXkEyXkFqcGc@._V1_SX300.jpg",
+    title: "American Psycho",
+  },
+  {
+    bookmarked: false,
+    imdbId: "tt0371724",
+    plot: `Mere seconds before the Earth is to be demolished by an alien construction crew, journeyman Arthur Dent is swept off the planet by his friend Ford Prefect, a researcher penning a new edition of "The Hitchhiker's Guide to the Galaxy."`,
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTg4OWYwZjgtZDU0ZS00NjU4LTkxNjItYmYyYmUwNDU5YmM3XkEyXkFqcGc@._V1_SX300.jpg",
+    title: "The Hitchhiker's Guide to the Galaxy",
+  },
+  {
+    bookmarked: false,
+    imdbId: "tt0113277",
+    plot: "A group of high-end professional thieves start to feel the heat from the LAPD when they unknowingly leave a verbal clue at their latest heist.",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTkxYjU1OTMtYWViZC00ZjAzLWI3MDktZGQ2N2VmMjVjNDRlXkEyXkFqcGc@._V1_SX300.jpg",
+    title: "Heat",
+  },
+  {
+    bookmarked: false,
+    imdbId: "tt0133093",
+    plot: "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_SX300.jpg",
+    title: "The Matrix",
   },
 ];
 

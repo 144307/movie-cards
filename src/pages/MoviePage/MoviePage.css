@@ -1,0 +1,36 @@
+.movie__wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.movie__info {
+  padding-top: 1rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.movie__title {
+  font-size: 3rem;
+}
+
+.movie__id {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.movie__plot {
+  font-size: 1.5rem;
+}
+
+.movie__controls {
+  margin-top: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.spacer {
+  flex: 1;
+}

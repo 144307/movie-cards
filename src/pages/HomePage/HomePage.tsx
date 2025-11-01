@@ -1,20 +1,33 @@
 import "./HomePage.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import type { IMovie, IRootState } from "../../types";
 import Card from "../../components/Card/Card";
-import { fetchMovieById } from "../../features/movie/movieSlice";
-import type { AppDispatch } from "../../store";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import { useMemo, useState } from "react";
 
 function HomePage() {
-  const dispatch = useDispatch<AppDispatch>();
-  const productData = useSelector((state: IRootState) => state.movies);
+  const allMovies = useSelector((state: IRootState) => state.movies);
+  const [filterByBookmarks, setFilterByBookmarks] = useState(false);
+  const filteredMovies = useMemo(() => {
+    if (!filterByBookmarks) {
+      return allMovies;
+    }
+    return allMovies.filter((e) => e.bookmarked);
+  }, [allMovies, filterByBookmarks]);
 
   return (
     <div className="page">
       <SearchBar></SearchBar>
+      <button
+        className={`button ${filterByBookmarks ? "button_toggled" : ""}`}
+        onClick={() => {
+          setFilterByBookmarks(!filterByBookmarks);
+        }}
+      >
+        Show Favorites
+      </button>
       <div className="card-grid">
-        {productData.map((movie: IMovie) => {
+        {filteredMovies.map((movie: IMovie) => {
           return (
             <Card
               key={movie.imdbId}
@@ -27,15 +40,6 @@ function HomePage() {
           );
         })}
       </div>
-      <button
-        onClick={() => {
-          dispatch(fetchMovieById("tt0083658")).then((response) =>
-            console.log(response)
-          );
-        }}
-      >
-        Test
-      </button>
     </div>
   );
 }

@@ -1,0 +1,74 @@
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.page {
+  width: 60%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2rem;
+  padding-bottom: 200px;
+}
+
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 14%);
+  /* box-shadow: 0 0 2px rgba(0, 0, 0, 14%), 0 2px 4px rgba(0, 0, 0, 14%); */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 14%); */
+}
+
+.card_pronounced {
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 18%);
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background: #e5e7eb;
+  color: hsl(217, 19%, 27%);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.button:hover {
+  background: #d1d5db;
+}
+
+.button:active {
+  background: #c4c8cf;
+}
+
+.button_like {
+  background: #ef4444;
+  color: white;
+}
+
+.button_like:hover {
+  background: #dc2626;
+}
+
+.button_like:active {
+  background: #b91c1c;
+}
+
+.button_toggled {
+  background-color: #2563eb;
+  color: white;
+}
+
+.button_toggled:hover {
+  background: #1d4ed8;
+}
+
+.button_toggled:active {
+  background: #1e40af;
+}
