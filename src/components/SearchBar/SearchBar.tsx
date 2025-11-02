@@ -33,7 +33,7 @@ function SearchBar() {
               dispatch(searchMovieByTitle(searchQuery.trim()))
                 .unwrap()
                 .then((movie) => {
-                  navigate(`./movies/${movie.imdbId}`);
+                  navigate(`/movies/${movie.imdbId}`);
                 });
             }
           }}
@@ -50,7 +50,7 @@ function SearchBar() {
                   key={`search-item-${e.imdbId}`}
                   className="search-result-item"
                   onClick={() => {
-                    navigate(`./movies/${e.imdbId}`);
+                    navigate(`/movies/${e.imdbId}`);
                   }}
                 >
                   {e.title}

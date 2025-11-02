@@ -27,7 +27,7 @@ function Card({
       className="card card_pronounced"
       onClick={() => {
         console.log("card clicked", title);
-        navigate(`./movies/${imdbId}`);
+        navigate(`/movies/${imdbId}`);
       }}
     >
       <img className="card__poster" src={poster} alt={`${title} poster`} />

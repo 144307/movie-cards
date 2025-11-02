@@ -34,7 +34,7 @@ function HomePage() {
         <button
           className="button button_outline"
           onClick={() => {
-            navigate("./add-movie");
+            navigate("/add-movie");
           }}
         >
           Add Movie
