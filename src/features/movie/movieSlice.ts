@@ -6,7 +6,7 @@ import {
 import type { IMovie, IRootState } from "../../types";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
-const baseUrl = "http://www.omdbapi.com/";
+const baseUrl = "https://www.omdbapi.com/";
 
 const initialState: IMovie[] = [
   {
