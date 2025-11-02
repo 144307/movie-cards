@@ -212,8 +212,12 @@ const movieSlice = createSlice({
     builder.addCase(fetchMovieById.rejected, () => {
       console.error("Movie already in store");
     });
-    builder.addCase(searchMovieByTitle.fulfilled, () => {
-      console.log("- display page of film if found");
+    builder.addCase(searchMovieByTitle.fulfilled, (state, action) => {
+      if (state.find((e) => e.imdbId === action.payload.imdbId)) {
+        return;
+      }
+
+      state.unshift(action.payload);
     });
     builder.addCase(searchMovieByTitle.rejected, (_, action) => {
       console.error(action.payload);

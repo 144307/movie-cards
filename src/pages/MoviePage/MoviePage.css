@@ -29,8 +29,5 @@
   padding-bottom: 1rem;
   display: flex;
   gap: 1rem;
-}
-
-.spacer {
-  flex: 1;
+  justify-content: space-between;
 }

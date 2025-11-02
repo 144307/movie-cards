@@ -47,20 +47,12 @@ function MoviePage() {
             >
               {movie.bookmarked ? "Liked" : "Like"}
             </button>
-            <div className="spacer"></div>
-            <button
-              className="button"
-              onClick={() => {
-                console.log("add to movies");
-              }}
-            >
-              Add to Movies
-            </button>
             <button
               className="button"
               onClick={(e) => {
                 e.stopPropagation();
                 dispatch(deleteCard(movie.imdbId));
+                navigate("/");
               }}
             >
               Delete

@@ -2,17 +2,21 @@
   width: fit-content;
   padding: 1rem;
   display: grid;
-  grid-row: span 5;
   grid-template-rows: subgrid;
+  grid-row: span 5;
+  grid-template-columns: subgrid;
+  grid-column: span 1;
   gap: 1rem;
 }
 
 .card__poster {
   display: block;
+  max-width: 500px;
 }
 
 .card__title {
   font-size: 1.75rem;
+  width: fit-content;
   /* padding-top: 0.75rem; */
   /* line-height: 150%; */
 }
