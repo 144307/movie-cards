@@ -15,6 +15,12 @@ body {
   padding-bottom: 200px;
 }
 
+.menu-bar {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
 .card {
   border-radius: 8px;
   overflow: hidden;
@@ -45,6 +51,11 @@ body {
 
 .button:active {
   background: #c4c8cf;
+}
+
+.button_outline {
+  border: 1px solid #ccc;
+  background-color: hsl(0, 0%, 98%);
 }
 
 .button_like {

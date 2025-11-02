@@ -201,6 +201,9 @@ const movieSlice = createSlice({
         movieToUpdate.bookmarked = !movieToUpdate.bookmarked;
       }
     },
+    addMovie: (state, action: PayloadAction<IMovie>) => {
+      state.unshift(action.payload);
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchMovieById.fulfilled, (state, action) => {
@@ -225,6 +228,6 @@ const movieSlice = createSlice({
   },
 });
 
-export const { deleteCard, setBookmark } = movieSlice.actions;
+export const { deleteCard, setBookmark, addMovie } = movieSlice.actions;
 
 export default movieSlice.reducer;

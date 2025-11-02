@@ -20,7 +20,7 @@ function HomePage() {
   return (
     <div className="page">
       <SearchBar></SearchBar>
-      <div className="page__menu-bar">
+      <div className="menu-bar">
         <button
           className={`button button_outline ${
             filterByBookmarks ? "button_toggled" : ""

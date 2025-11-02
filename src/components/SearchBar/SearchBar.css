@@ -34,16 +34,12 @@
   background-color: white;
   cursor: pointer;
   font-size: 1.5rem;
+  text-align: start;
 }
 
 .search-controls {
   display: flex;
   gap: 1rem;
-}
-
-.button_outline {
-  border: 1px solid #ccc;
-  background-color: hsl(0, 0%, 98%);
 }
 
 .search-radio:checked + .search-button {

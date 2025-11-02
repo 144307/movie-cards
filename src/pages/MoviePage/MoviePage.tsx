@@ -19,14 +19,16 @@ function MoviePage() {
   return (
     <div className="page">
       <SearchBar></SearchBar>
-      <button
-        className="button"
-        onClick={() => {
-          navigate("/");
-        }}
-      >
-        Back to Home Page
-      </button>
+      <div className="menu-bar">
+        <button
+          className="button button_outline"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Back to Home Page
+        </button>
+      </div>
       <div className="card movie__wrapper">
         <img
           className="movie__poster"
