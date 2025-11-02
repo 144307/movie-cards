@@ -46,12 +46,15 @@ function SearchBar() {
           {!globalSearch ? (
             filteredMovies?.map((e) => {
               return (
-                <div
+                <button
                   key={`search-item-${e.imdbId}`}
                   className="search-result-item"
+                  onClick={() => {
+                    navigate(`./movies/${e.imdbId}`);
+                  }}
                 >
                   {e.title}
-                </div>
+                </button>
               );
             })
           ) : (

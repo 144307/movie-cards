@@ -5,6 +5,8 @@
   justify-content: space-around;
 }
 
-.card-grid_ {
-  justify-content: start;
+.page__menu-bar {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
 }

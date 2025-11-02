@@ -5,7 +5,7 @@ export interface IMovie {
   // fullPlot: string;
   poster: string;
   bookmarked: boolean;
-  // custom: boolean
+  custom?: boolean;
 }
 
 export interface IRootState {

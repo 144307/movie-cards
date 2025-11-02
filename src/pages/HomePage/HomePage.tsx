@@ -4,8 +4,10 @@ import type { IMovie, IRootState } from "../../types";
 import Card from "../../components/Card/Card";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import { useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
+  const navigate = useNavigate();
   const allMovies = useSelector((state: IRootState) => state.movies);
   const [filterByBookmarks, setFilterByBookmarks] = useState(false);
   const filteredMovies = useMemo(() => {
@@ -18,14 +20,26 @@ function HomePage() {
   return (
     <div className="page">
       <SearchBar></SearchBar>
-      <button
-        className={`button ${filterByBookmarks ? "button_toggled" : ""}`}
-        onClick={() => {
-          setFilterByBookmarks(!filterByBookmarks);
-        }}
-      >
-        Show Favorites
-      </button>
+      <div className="page__menu-bar">
+        <button
+          className={`button button_outline ${
+            filterByBookmarks ? "button_toggled" : ""
+          }`}
+          onClick={() => {
+            setFilterByBookmarks(!filterByBookmarks);
+          }}
+        >
+          Show Favorites
+        </button>
+        <button
+          className="button button_outline"
+          onClick={() => {
+            navigate("./add-movie");
+          }}
+        >
+          Add Movie
+        </button>
+      </div>
       <div className="card-grid">
         {filteredMovies.map((movie: IMovie) => {
           return (
