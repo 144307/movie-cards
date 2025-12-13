@@ -1,14 +1,20 @@
 import "./HomePage.css";
-import { useSelector } from "react-redux";
-import type { IMovie, IRootState } from "../../types";
+import { useDispatch, useSelector } from "react-redux";
+import type { IMovie } from "../../types";
 import Card from "../../components/Card/Card";
-import SearchBar from "../../components/SearchBar/SearchBar";
 import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import type { AppDispatch, RootState } from "../../store";
+import Header from "../../components/Header/Header";
+import LoginForm from "../../components/LoginForm/LoginForm";
+import SignupForm from "../../components/SignupForm/SignupForm";
+import { fetchProfile } from "../../features/user/userSlice";
+import SearchBar from "../../components/SearchBar/SearchBar";
 
 function HomePage() {
+  const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
-  const allMovies = useSelector((state: IRootState) => state.movies);
+  const allMovies = useSelector((state: RootState) => state.movies);
   const [filterByBookmarks, setFilterByBookmarks] = useState(false);
   const filteredMovies = useMemo(() => {
     if (!filterByBookmarks) {
@@ -19,6 +25,16 @@ function HomePage() {
 
   return (
     <div className="page">
+      <Header></Header>
+      <button
+        onClick={() => {
+          dispatch(fetchProfile());
+        }}
+      >
+        fetch Profile
+      </button>
+      <SignupForm></SignupForm>
+      <LoginForm></LoginForm>
       <SearchBar></SearchBar>
       <div className="menu-bar">
         <button

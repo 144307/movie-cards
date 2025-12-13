@@ -8,6 +8,12 @@ export interface IMovie {
   custom?: boolean;
 }
 
-export interface IRootState {
-  movies: IMovie[];
+export interface IUserSlice {
+  userId: string | null;
+  username: string | null;
+  profileImageURL: string | null;
 }
+
+// export interface IRootState {
+//   movies: IMovie[];
+// }

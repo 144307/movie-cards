@@ -1,15 +1,15 @@
 import "./SearchBar.css";
 import { useDispatch, useSelector } from "react-redux";
-import type { AppDispatch } from "../../store";
+import type { AppDispatch, RootState } from "../../store";
 import { searchMovieByTitle } from "../../features/movie/movieSlice";
 import { useMemo, useState } from "react";
-import type { IMovie, IRootState } from "../../types";
+import type { IMovie } from "../../types";
 import { useNavigate } from "react-router-dom";
 
 function SearchBar() {
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
-  const allMovies = useSelector((state: IRootState) => state.movies);
+  const allMovies = useSelector((state: RootState) => state.movies);
   const [searchQuery, setSearchQuery] = useState("");
   const [globalSearch, setGlobalSearch] = useState(false);
   const filteredMovies = useMemo(() => {
@@ -44,7 +44,7 @@ function SearchBar() {
         />
         <div className="search-result">
           {!globalSearch ? (
-            filteredMovies?.map((e) => {
+            filteredMovies?.map((e: IMovie) => {
               return (
                 <button
                   key={`search-item-${e.imdbId}`}

@@ -3,7 +3,8 @@ import {
   createSlice,
   type PayloadAction,
 } from "@reduxjs/toolkit";
-import type { IMovie, IRootState } from "../../types";
+import type { IMovie } from "../../types";
+import type { RootState } from "../../store";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 const baseUrl = "https://www.omdbapi.com/";
@@ -105,7 +106,7 @@ export const searchMovieByTitle = createAsyncThunk<
   IMovie,
   string,
   {
-    state: IRootState;
+    state: RootState;
     rejectValue: string;
   }
 >("movie/searchByTitle", async (movieTitle: string, { rejectWithValue }) => {
@@ -150,7 +151,7 @@ export const fetchMovieById = createAsyncThunk<
   string,
   // 3. The thunk API config
   {
-    state: IRootState; // needed for getState();
+    state: RootState; // needed for getState();
     rejectValue: string; // Type for what's returned on error
   }
 >("movie/fetchById", async (imdbId: string, { getState, rejectWithValue }) => {
@@ -192,7 +193,6 @@ const movieSlice = createSlice({
       return state.filter((e) => e.imdbId !== action.payload);
     },
     setBookmark: (state, action: PayloadAction<string>) => {
-      console.log("set bookman on", action.payload);
       const imdbIdToToggle = action.payload;
       const movieToUpdate = state.find(
         (movie) => movie.imdbId === imdbIdToToggle
